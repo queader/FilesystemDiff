@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Filesystem Diff</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI";
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        th {
+            font-weight: normal;
+        }
+
+        .main-header {
+            font-size: 13px;
+            position: fixed;
+            z-index: 4000;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 24px;
+            display: flex;
+            margin-left: 5px;
+            margin-right: 5px;
+            background: white;
+        }
+
+            .main-header span {
+                padding: 1px;
+                padding-left: 4px;
+                padding-right: 4px;
+                vertical-align: middle;
+                border-right-width: 1px;
+                border-right-style: solid;
+                border-color: #E5E5E5;
+                padding-top: 2px;
+            }
+
+                .main-header span:nth-child(1) {
+                    text-align: left;
+                    flex: 1;
+                }
+
+                .main-header span:nth-child(n+2):nth-child(-n+6) {
+                    text-align: right;
+                    width: 65px;
+                }
+
+
+                .main-header span:nth-child(n+7):nth-child(-n+8) {
+                    text-align: right;
+                    width: 80px;
+                }
+
+
+                .main-header span:nth-child(9) {
+                    text-align: left;
+                    flex: 1;
+                }
+
+                .main-header span:nth-child(n+10):nth-child(-n+14) {
+                    text-align: right;
+                    width: 65px;
+                }
+
+        .main-data {
+            font-size: 13px;
+            margin-top: 24px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            .main-data .data-row {
+                height: 24px;
+            }
+
+            .main-data .data-row-ins {
+                height: 24px;
+                display: flex;
+            }
+
+                .main-data .data-row-ins:hover {
+                    background-color: rgba(0, 0, 0, 0.035);
+                }
+
+            .main-data span {
+                padding: 1px;
+                padding-left: 4px;
+                padding-right: 5px;
+                vertical-align: middle;
+                padding-top: 2px;
+            }
+
+                .main-data span:nth-child(1) {
+                    text-align: left;
+                    flex: 1;
+                }
+
+                .main-data span:nth-child(n+2):nth-child(-n+6) {
+                    text-align: right;
+                    width: 65px;
+                }
+
+
+                .main-data span:nth-child(n+7):nth-child(-n+8) {
+                    text-align: right;
+                    width: 80px;
+                }
+
+                .main-data span:nth-child(6) {
+                    text-align: right;
+                    width: 80px;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    border-right-width: 1px;
+                    border-right-style: solid;
+                    border-color: #E5E5E5;
+                }
+
+                .main-data span:nth-child(8) {
+                    text-align: right;
+                    width: 80px;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    border-right-width: 1px;
+                    border-right-style: solid;
+                    border-color: #E5E5E5;
+                }
+
+                .main-data span:nth-child(9) {
+                    text-align: left;
+                    flex: 1;
+                }
+
+                .main-data span:nth-child(n+10):nth-child(-n+14) {
+                    text-align: right;
+                    width: 65px;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="main-header">
+
+        <span>Name</span>
+        <span>Percentage</span>
+        <span>Size</span>
+        <span>Items</span>
+        <span>Files</span>
+        <span>Subdirs</span>
+        <span>Diff Ratio</span>
+        <span>Diff Size</span>
+        <span>Name</span>
+        <span>Percentage</span>
+        <span>Size</span>
+        <span>Items</span>
+        <span>Files</span>
+        <span>Subdirs</span>
+
+    </div>
+
+    <div class="main-data">
+
+        <div class="data-row">
+            <div class="data-row-ins">
+                <span>C:</span>
+                <span>86%</span>
+                <span>24.3 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+
+                <span>+2.2%</span>
+                <span>+1.2 GB</span>
+
+                <span>C:</span>
+                <span>86%</span>
+                <span>26.8 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+            </div>
+        </div>
+
+        <div class="data-row" style="background-color: #B0CEF2">
+            <div class="data-row-ins">
+                <span>C:</span>
+                <span>86%</span>
+                <span>24.3 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+
+                <span>+2.2%</span>
+                <span>+1.2 GB</span>
+
+                <span>C:</span>
+                <span>86%</span>
+                <span>26.8 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+            </div>
+        </div>
+
+        <div class="data-row" style="background-color: #B0CEF2">
+            <div class="data-row-ins">
+                <span>C:</span>
+                <span>86%</span>
+                <span>24.3 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+
+                <span>+2.2%</span>
+                <span>+1.2 GB</span>
+
+                <span>C:</span>
+                <span>86%</span>
+                <span>26.8 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+            </div>
+        </div>
+
+        <div class="data-row" style="background-color: #FFBD6D">
+            <div class="data-row-ins">
+                <span><span style="display: inline-block; width: 6px;"></span>C:</span>
+                <span>86%</span>
+                <span>24.3 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+
+                <span>+2.2%</span>
+                <span>+1.2 GB</span>
+
+                <span><span style="display: inline-block; width: 6px;"></span>C:</span>
+                <span>86%</span>
+                <span>26.8 GB</span>
+                <span>29232</span>
+                <span>12332</span>
+                <span>15439</span>
+            </div>
+        </div>
+
+        <div id="test">
+
+        </div>
+
+        <script>
+
+            for (var n = 0; n < 100; ++n) {
+                document.getElementById("test").innerHTML += ('<div class="data-row">' +
+                    '<div class="data-row-ins">' +
+                    '<span><span style="display:inline-block; width: 6px;"></span>C:</span>' +
+                    '<span>86%</span>' +
+                    '<span>24.3 GB</span>' +
+                    '<span>29232</span>' +
+                    '<span>12332</span>' +
+                    '<span>15439</span>' +
+                    '<span>+2.2%</span>' +
+                    '<span>+1.2 GB</span>' +
+                    '<span><span style="display:inline-block; width: 6px;"></span>C:</span>' +
+                    '<span>86%</span>' +
+                    '<span>26.8 GB</span>' +
+                    '<span>29232</span>' +
+                    '<span>12332</span>' +
+                    '<span>15439</span>' +
+                    '</div>' +
+                    '</div>');
+            }
+
+        </script>
+
+    </div>
+
+</body>
+</html>

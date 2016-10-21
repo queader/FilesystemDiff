@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesystemDiff", "Filesyste
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumpFilesystemScan", "DumpFilesystemScan\DumpFilesystemScan.csproj", "{400F7325-DFD7-466D-8ED7-09F8F7804339}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIffReportGenerator", "DIffReportGenerator\DIffReportGenerator.csproj", "{BAD5C17B-1EBE-4CE9-9CF9-F425699BAC14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{400F7325-DFD7-466D-8ED7-09F8F7804339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400F7325-DFD7-466D-8ED7-09F8F7804339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400F7325-DFD7-466D-8ED7-09F8F7804339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAD5C17B-1EBE-4CE9-9CF9-F425699BAC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAD5C17B-1EBE-4CE9-9CF9-F425699BAC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAD5C17B-1EBE-4CE9-9CF9-F425699BAC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAD5C17B-1EBE-4CE9-9CF9-F425699BAC14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
